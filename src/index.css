@@ -1,0 +1,4 @@
+@import url('./vendor/normalize.css');
+@import url('./vendor/Montserrat/montserrat.css');
+@import url('../src/components/Table/table.css');
+@import url('../src/components/Second/Second.css');

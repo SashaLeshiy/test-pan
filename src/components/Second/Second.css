@@ -1,0 +1,20 @@
+.second {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 0 !important;
+    padding-top: 30px;
+}
+
+.second__text {
+    padding: 20px 10px;
+    border: 1px solid #000000;
+}
+
+.second__check {
+    margin-left: 0 !important;
+}
+
+.second__check_text {
+    padding: 0 10px;
+}
