@@ -10,11 +10,10 @@ function Table({ onSort, currentUsers, stateUser, setStateUser, currentPage }) {
         (<table className="table">
             < thead >
                 <tr>
-                    <th ><button className="table__button" onClick={onSort} name='id'>ID</button></th>
+                    <th ><button className="table__button" name='text'>Text</button></th>
                     <th ><button className="table__button" onClick={onSort} name='fname'>First Name</button></th>
                     <th ><button className="table__button" onClick={onSort} name='lname'>Last Name</button></th>
                     <th ><button className="table__button" onClick={onSort} name='email'>E-mail</button></th>
-                    <th ><button className="table__button" onClick={onSort} name='phone'>Phone</button></th>
                 </tr>
             </thead >
             <tbody>

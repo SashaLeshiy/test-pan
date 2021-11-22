@@ -13,7 +13,7 @@ function App() {
   const [usersPerPage] = useState(5);
 
   const [stateUser, setStateUser] = useState(
-    [{ data: { id: '', fname: '', lname: '', email: '', phone: '' }, _id: Number(currentPage+'0') }]
+    [{ data: { text: '', fname: '', lname: '', email: '' }, _id: Number(currentPage+'0') }]
   );
 
   const [sort, setSort] = useState('desc');
@@ -63,7 +63,7 @@ function App() {
   const addForm = () => {
     setStateUser([...stateUser,
     {
-      data: { id: '', fname: '', lname: '', email: '', phone: '' },
+      data: { text: '', fname: '', lname: '', email: '' },
       _id: Number(`${currentPage}${stateUser.length}`)
     }
     ]);
@@ -72,6 +72,8 @@ function App() {
   const deleteEmpty = () => {
     setStateUser(JSON.parse(localStorage.getItem('nonEmptyField')));
   }
+
+  console.log(stateUser);
 
   return (
     <div className="app">

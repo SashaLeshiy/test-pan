@@ -14,12 +14,13 @@ function TableRow({ user, stateUser, setStateUser, _id }) {
 
     return (
         <tr key={_id}>
-            <td><input
-                name="id"
-                value={user.data.id}
+            <td><textarea
+                name="text"
+                value={user.data.text}
                 className="form-control"
-                type="number"
+                type="text"
                 onChange={addData}
+                rows="3"
             /></td>
             <td><input
                 name="fname"
@@ -42,13 +43,7 @@ function TableRow({ user, stateUser, setStateUser, _id }) {
                 type="email"
                 onChange={addData}
             /></td>
-            <td><input
-                name="phone"
-                value={user.data.phone}
-                className="form-control"
-                type="text"
-                onChange={addData}
-            /></td>
+            
         </tr>
     );
 }
