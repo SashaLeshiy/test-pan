@@ -20,7 +20,6 @@ function TableRow({ user, stateUser, setStateUser, _id }) {
                 className="form-control"
                 type="text"
                 onChange={addData}
-                rows="3"
             /></td>
             <td><input
                 name="fname"

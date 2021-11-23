@@ -10,17 +10,14 @@ function App() {
 
   
   const [currentPage, setCurrentPage] = useState(1);
-  const [usersPerPage] = useState(5);
+  const [usersPerPage] = useState(50);
 
   const [stateUser, setStateUser] = useState(
     [{ data: { text: '', fname: '', lname: '', email: '' }, _id: Number(currentPage+'0') }]
   );
 
   const [sort, setSort] = useState('desc');
-
-   
-
-
+  
   const lastUsersIndex = currentPage * usersPerPage;
   const firstUsersIndex = lastUsersIndex - usersPerPage;
   const currentUsers = stateUser.slice(firstUsersIndex, lastUsersIndex);
