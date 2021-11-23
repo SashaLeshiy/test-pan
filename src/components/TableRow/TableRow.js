@@ -1,6 +1,10 @@
 import React from 'react';
 
-function TableRow({ user, stateUser, setStateUser, _id }) {
+function TableRow({ user,
+    stateUser,
+    setStateUser,
+    _id,
+}) {
 
     const addData = (e) => {
         const { name, value, } = e.target;
@@ -11,6 +15,7 @@ function TableRow({ user, stateUser, setStateUser, _id }) {
         let nonEmptyData = list.filter(el => el[name] !== '');
         localStorage.setItem('nonEmptyField', JSON.stringify(nonEmptyData));
     }
+
 
     return (
         <tr key={_id}>
@@ -42,7 +47,6 @@ function TableRow({ user, stateUser, setStateUser, _id }) {
                 type="email"
                 onChange={addData}
             /></td>
-            
         </tr>
     );
 }

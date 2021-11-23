@@ -10,7 +10,8 @@ function Main({ onSort,
     usersPerPage,
     paginate,
     addForm,
-    deleteEmpty
+    deleteEmpty,
+    loadDemo
 }) {
     return (
         <div className="container">

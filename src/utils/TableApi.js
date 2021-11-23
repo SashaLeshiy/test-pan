@@ -24,7 +24,7 @@ export default class TableApi {
 }
 
 const config = {
-    url: `http://www.filltext.com/?rows=160&id={number|1000}&fname={firstName}&lname={lastName}&email={email}&phone={phone|(xxx)xxx-xx-xx}`,
+    url: `http://www.filltext.com/?rows=160&fname={firstName}&lname={lastName}&email={email}`,
 }
 
 export const api = new TableApi(config);

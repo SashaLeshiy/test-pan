@@ -1,8 +1,12 @@
 import React from 'react';
-import { useDispatch, useSelector } from "react-redux";
 import TableRow from '../TableRow/TableRow';
 
-function Table({ onSort, currentUsers, stateUser, setStateUser, currentPage }) {
+function Table({ onSort, 
+    currentUsers, 
+    stateUser, 
+    setStateUser, 
+    currentPage,
+}) {
 
     return (
         <>

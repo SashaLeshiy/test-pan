@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import api from '../../utils/TableApi'
 import _ from 'lodash';
 import Second from '../../components/Second/Second';
 import './App.css';
@@ -8,7 +9,6 @@ import Main from '../Main/Main';
 
 function App() {
 
-  
   const [currentPage, setCurrentPage] = useState(1);
   const [usersPerPage] = useState(50);
 
@@ -17,7 +17,7 @@ function App() {
   );
 
   const [sort, setSort] = useState('desc');
-  
+
   const lastUsersIndex = currentPage * usersPerPage;
   const firstUsersIndex = lastUsersIndex - usersPerPage;
   const currentUsers = stateUser.slice(firstUsersIndex, lastUsersIndex);
@@ -27,8 +27,8 @@ function App() {
   // деактивированная функция подгрузки демо контента 
   // function loadDemo() {
   //   api.getList()
-  //           .then((data) => {
-  //               setStateUser(data);
+  //           .then((res) => {
+  //               setStateUser({data: res});
   //           })
   //           .catch((err) => {
   //               console.log(err);
@@ -69,8 +69,6 @@ function App() {
   const deleteEmpty = () => {
     setStateUser(JSON.parse(localStorage.getItem('nonEmptyField')));
   }
-
-  console.log(stateUser);
 
   return (
     <div className="app">
